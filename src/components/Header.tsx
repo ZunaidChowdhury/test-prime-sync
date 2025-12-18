@@ -103,7 +103,7 @@ export default function Header() {
             </nav>
             {/* Mobile Menu (Slide-down) */}
             {navMenuOpen && (
-                <div className="lg:hidden bg-white mt-1 rounded-lg shadow-md px-4 py-3 animate-slideDown">
+                <div className="lg:hidden container mx-auto bg-white mt-1 rounded-lg shadow-md px-4 py-3 animate-slideDown">
 
                     {/* Mobile Categories */}
                     <ul className="flex flex-col gap-2">
