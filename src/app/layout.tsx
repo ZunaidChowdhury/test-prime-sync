@@ -4,6 +4,15 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Test from "@/components/Test";
 
+// app/layout.tsx
+import { Outfit } from 'next/font/google';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap', // Prevents invisible text during load
+  variable: '--font-outfit', // Optional: for Tailwind CSS integration
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.className} antialiased`}
       >
         <Header />
         {/* <Test /> */}
