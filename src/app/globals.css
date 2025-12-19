@@ -9,7 +9,7 @@
 * {
   /* margin: 0;
   padding: 0; */
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 ul, ol {
@@ -17,8 +17,8 @@ ul, ol {
 }
 
 :root {
-  /* --background: #f0f1f5; */
-  --background: #8d8d8d;
+  --background: #f0f1f5;
+  /* --background: #8d8d8d; */
 
 
   --surface: #ffffff;

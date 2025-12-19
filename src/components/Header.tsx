@@ -203,7 +203,7 @@ function Dropdown({
             </button>
 
             {open && (
-                <div className="absolute left-0 top-full min-w-[220px] rounded-2xl bg-[#0f1f1f] p-2 shadow-xl">
+                <div className="absolute left-0 z-100 top-full min-w-[220px] rounded-2xl bg-[#0f1f1f] p-2 shadow-xl">
                     {children}
                 </div>
             )}
