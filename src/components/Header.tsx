@@ -30,7 +30,7 @@ export default function Header() {
 
     return (
         <header>
-            <nav className="container  xl:max-w-305 h-16  mx-auto px-4 bg-white mt-6 rounded-xl">
+            <nav className="container border-t-[3px] border-primary shadow-lg  xl:max-w-305 h-16  mx-auto px-4 bg-white mt-6 rounded-xl">
                 <div className="flex h-full items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2 ml-3 cursor-pointer">
