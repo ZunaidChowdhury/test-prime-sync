@@ -103,7 +103,7 @@ export default function AutomateSection() {
                         </div>
 
                         {/* FORM */}
-                        <div className={` ${currentForm === 1 ? 'h-61' : currentForm === 2 ? 'h-124.5' : currentForm === 3 ? 'h-115' : currentForm === 4 ? 'h-80' : 'h-80'} rounded-2xl border-2 border-[#40E1D1]/30 bg-surface shadow-sm p-5 transition-all duration-500`}>
+                        <div className={`relative ${currentForm === 1 ? 'h-61' : currentForm === 2 ? 'h-124.5' : currentForm === 3 ? 'h-115' : currentForm === 4 ? 'h-80' : 'h-80'} rounded-2xl border-2 border-[#40E1D1]/30 bg-surface shadow-sm p-5 transition-all duration-500`}>
                             <VerticalTextSlider
                                 paraText={<><span className='font-semibold'>PrimeSync</span> is accepting meetings with</>}
                                 paraClasses='text-text-primary text-base'
@@ -120,22 +120,27 @@ export default function AutomateSection() {
                                 Please email <span className="font-semibold">info@primesync.com</span> for all other inquiries.
                             </p>
 
-                            <form className='relative'>
-                                <Form1 currentForm={currentForm} handleNextForm={handleNextForm} />
-                                <button
-                                    type="button"
-                                    className={` absolute items-center gap-2 bg-[#40E1D1]  text-base rounded-md font-medium text-white transition-all  cursor-pointer ${currentForm === 1 ? 'translate-x-[398px] translate-y-[20px] py-[13px] px-[20px] duration-2000' : currentForm === 2 ? 'translate-x-[0px] translate-y-[371px] px-5 py-2 duration-2000' : 'translate-x-[0px] translate-y-[338px] px-5 py-2'}
+                            <button
+                                type="button"
+                                className={`z-1 absolute items-center justify-center gap-2 bg-[#40E1D1]  text-base rounded-md font-medium text-white transition-all ease-in-out cursor-pointer 
+                                                ${currentForm === 1 ? ' py-[25px] px-[25px] top-21 right-5 bottom-[calc(100%-30px)] left-[75%] lg:left-[80%] xl:left-[75%]' :
+                                        currentForm === 2 ? ' py-[20px] px-[25px] top-[calc(100%-55px)] right-[70%] sm:right-[73%] md:right-[78%] lg:right-[82%] xl:right-[71%] bottom-4 left-5 duration-2000' :
+                                            ' py-[20px] px-[25px] top-[calc(100%-55px)] right-[70%] sm:right-[73%] md:right-[78%] lg:right-[82%] xl:right-[71%] bottom-4 left-5 duration-2000'}
+
                                     ${currentForm === 4 ? "hidden opacity-0" : "flex hover:opacity-90 opacity-100"} starting:opacity-0`}
-                                    onClick={currentForm === 3 ? handlePrevForm : handleNextForm}
-                                >
-                                    {currentForm === 3 ? <ArrowLeft size={18} /> : <></>}
-                                    {currentForm === 3 ? 'Previous' : 'Next'}
-                                    {currentForm === 1 ? <ArrowUpRight size={18} /> : currentForm === 2 ? <ArrowRight size={18} /> : <></>}
-                                </button>
+                                onClick={currentForm === 3 ? handlePrevForm : handleNextForm}
+                            >
+                                {currentForm === 3 ? <ArrowLeft size={18} /> : <></>}
+                                {currentForm === 3 ? 'Previous' : 'Next'}
+                                {currentForm === 1 ? <ArrowUpRight size={18} /> : currentForm === 2 ? <ArrowRight size={18} /> : <></>}
+                            </button>
+                            <form className='relative '>
+                                <Form1 currentForm={currentForm} handleNextForm={handleNextForm} />
+
 
                                 <button
                                     type="button"
-                                    className={`flex  absolute px-6 py-2 items-center gap-2 bg-[#40E1D1]  text-base rounded-md font-medium text-white transition-all transition-discrete duration-1500 starting:opacity-0 ${currentForm !== 3 ? "translate-x-0 translate-y-[338px]  opacity-0 disabled " : ' translate-x-[140px] translate-y-[338px] hover:opacity-90 cursor-pointer opacity-100'} `}
+                                    className={`flex  absolute px-6 lg:px-8 py-2 items-center gap-2 bg-[#40E1D1]  text-base rounded-md font-medium text-white transition-all transition-discrete duration-1500 starting:opacity-0 ${currentForm !== 3 ? "translate-x-0 translate-y-[338px]  opacity-0 disabled " : ' translate-x-[170px] sm:translate-x-[152px] md:translate-x-[150px] lg:translate-x-[170px] xl:translate-x-[155px] translate-y-[338px] hover:opacity-90 cursor-pointer opacity-100'} `}
                                     onClick={handleNextForm}
                                 >
 
@@ -202,7 +207,8 @@ function FeatureCard({
     step: string
 }) {
     return (
-        <div className="relative group flex items-center gap-4 rounded-2xl bg-[#f6f6f6] p-2 shadow-sm border-4 border-white">
+        <div className="border-animation relative group flex items-center gap-4 rounded-2xl bg-[#f6f6f6] p-2 shadow-sm border-4 border-white">
+
             <div className='absolute flex items-start justify-center bg-primary text-white italic px-4  w-[90px] h-[30px] rounded-lg translate-x-1 -translate-y-8 -z-1 group-hover:-translate-y-11 transition-all duration-300'>
                 <span className='text-sm pt-1 group-hover:pt-0 transition-all duration-300'>{step}</span>
             </div>

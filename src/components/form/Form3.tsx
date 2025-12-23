@@ -16,7 +16,7 @@ type Form3Props = {
 
 export default function FormStepTwo({ currentForm, handleNextForm }: Form3Props) {
     return (
-        <div className={`w-full max-w-[520px] mt-5 mx-auto space-y-4 absolute transition-all transition-discrete  duration-2000
+        <div className={`w-full  mt-5 mx-auto space-y-4 absolute transition-all transition-discrete  duration-2000
             ${currentForm === 3 ? "block opacity-100" : "hidden opacity-0"} starting:opacity-0`}>
             <h3 className="font-semibold text-base">
                 How did you hear about us?<span className="text-red-500">*</span>
