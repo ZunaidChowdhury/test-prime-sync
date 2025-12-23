@@ -11,14 +11,14 @@ type Form1Props = {
 const Form1 = ({ currentForm, handleNextForm }: Form1Props) => {
     
     return (
-        <div className={`mt-5 absolute transition-all transition-discrete duration-2000
+        <div className={`mt-5 absolute  left-0 right-0 transition-all transition-discrete duration-2000 
             ${currentForm === 1 ? "block opacity-100" : "hidden opacity-0"} starting:opacity-0`}>
-            <div className="flex overflow-hidden rounded-md border border-[#40E1D1]/40 bg-white">
+            <div className="flex overflow-hidden rounded-md border border-[#40E1D1]/40 ">
                 <input
                     type="email"
                     required
                     placeholder="Enter your Company Email..."
-                    className="w-[490px] px-4 py-3 text-base outline-none"
+                    className="w-full bg-white px-4 py-3 text-base outline-none"
                 />
                 {/* <button
                     type="button"

@@ -34,9 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en"
+          className='min-w-[575px] overflow-x-auto'>
       <body
-        className={`${outfit.className} antialiased`}
+        className={`${outfit.className} antialiased `}
       >
         <Header />
         {/* <Test /> */}
