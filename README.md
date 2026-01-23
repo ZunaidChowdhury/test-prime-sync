@@ -1,6 +1,6 @@
 # test-prime-sync
 
-<p>Live project - https://zunaidchowdhury.github.io/a02-TechWave/</p>
+<p>Live project - https://test-prime-sync.vercel.app/</p>
 
 
 <h1>Desktop Version</h1>
