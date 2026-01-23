@@ -1,4 +1,16 @@
 # test-prime-sync
+
+<p>Live project - https://zunaidchowdhury.github.io/a02-TechWave/</p>
+
+
+<h1>Desktop Version</h1>
+<div align="center">
+  <img src="./public/assets/developer-test.png" width="100%" alt="Completed project image" />
+</div>
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
