@@ -6,6 +6,7 @@ import Test from "@/components/Test";
 
 // app/layout.tsx
 import { Outfit } from 'next/font/google';
+import DeveloperBar from "@/components/DeveloperBar";
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body
         className={`${outfit.className} antialiased `}
       >
+        <DeveloperBar />
         <Header />
         {/* <Test /> */}
         {children}
